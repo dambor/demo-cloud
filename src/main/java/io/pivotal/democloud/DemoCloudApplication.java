@@ -16,7 +16,7 @@ public class DemoCloudApplication {
 
 	@RequestMapping("/hi")
 	public String hi() {
-		return "Hello!!!";
+		return "Hello TMC!!!";
 	}
 
 }
