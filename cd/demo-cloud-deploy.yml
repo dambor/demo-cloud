@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-cloud
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: demo-cloud
+  template:
+    metadata:
+      labels:
+        app: demo-cloud
+    spec:
+      containers:
+      - image: harbor.vallejo.cf-app.com/library/demo-cloud:latest
+        name: demo-cloud
+        ports:
+        - containerPort: 80
